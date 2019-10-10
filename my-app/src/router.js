@@ -20,7 +20,7 @@ export default new Router({
       component: RoomDetail
     },
     {
-      path: '/roomdetailinfo',
+      path: '/roomdetailinfo/:roomInfoStr',
       
       component: RoomDetailInfo
     },

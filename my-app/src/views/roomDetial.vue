@@ -24,8 +24,9 @@
               </p>
             </div>
             
-            <router-link to="/roomdetailinfo" class="look">去看看</router-link>
-            
+            <router-link :to="'/roomdetailinfo/'+item.id" class="look">去看看</router-link>
+            <!-- <router-link :to="'/roomdetailinfo/'+[roomData.id,item.typeBed,item.typeRoom,item.id]" class="look">去看看</router-link> -->
+            <!-- https://api.yizhulife.com/room/2621/fast  item.id -->
         </div>
         <div class="look-more">
           <span @click="lookmore" v-if="roomTypeInfoVosNum>3">查看更多</span>
@@ -145,7 +146,7 @@ export default {
     
     this.roomNum=this.$route.params.roomNum;
     this.roomUrl+=this.roomNum;
-    console.log(this.roomUrl);
+    // console.log(this.roomUrl);
      axios({
               method:'get',
               url:this.roomUrl,
@@ -165,9 +166,9 @@ export default {
                   this.roomTypeInfoVos.push(this.roomData.roomTypeInfoVos[i]);
                 }
               }
-              this.room_date=this.roomData;
-              console.log(this.roomData);
-              console.log(this.room_date);
+              
+              // console.log(this.roomData.roomTypeInfoVos);
+              
               // this.swplist = res.data.data;
             });
             

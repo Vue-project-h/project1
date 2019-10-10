@@ -12,20 +12,18 @@
     <div class="roominfo">
       <img src="@/assets/img/20190819111352863_40.jpg" alt="">
       <div class="roominfotext df">
-        <h2>深圳市龙华区民治樟坑一区135栋</h2>
+        <h2>{{roomData.title}}</h2>
         <div class="aboutroom df">
-          <span>整租</span>
-          <span>精装房</span>
-          <span>带电梯</span>
-          <span>地铁</span>
+          <span v-for="(item,index) of roomData.features" :key="index">{{item.name}}</span>
+          
         </div>
         <div  class="rf-left df">
           <div class="rff">
             <span  class="p-title">租金:</span> 
-            <span  class="price">2000 元/月</span> 
+            <span  class="price">{{roomData.fee}} 元/月</span> 
             <span  class="p-title">已有0人预约</span>
           </div>
-           <div class="p-title">2押1付</div>
+           <div class="p-title">{{roomData.feeTypeYa}}押{{roomData.feeTypeFu}}付</div>
           
         </div>
       </div>
@@ -37,20 +35,20 @@
           房源概况
           <p>Housing profile</p>
           </h2>
-        <div class="rt-num">
-          发布于2019-04-08
+        <div class="rt-num" >
+          发布于{{roomData.releaseTime}}
         </div>
         
       </div>
       <div class="housing-text">
        <div class="situation_info">
-         <dl ><dt >租金：</dt> <dd >1500元/月</dd></dl> 
-         <dl ><dt >房型：</dt> <dd >1房1厅</dd></dl> 
-         <dl ><dt >面积：</dt> <dd >38m²</dd></dl> 
-         <dl ><dt >楼层：</dt> <dd >4楼/总共15层</dd></dl> 
+         <dl ><dt >租金：</dt> <dd >{{roomData.fee}}元/月</dd></dl> 
+         <dl ><dt >房型：</dt> <dd >{{roomData.typeBed}}房{{roomData.typeRoom}}厅</dd></dl> 
+         <dl ><dt >面积：</dt> <dd >{{roomData.area}}m²</dd></dl> 
+         <dl ><dt >楼层：</dt> <dd >{{roomData.floor}}楼/总共{{roomData.totalFloor}}层</dd></dl> 
          <dl ><dt >类型：</dt> <dd >精装公寓</dd> </dl> 
-         <dl ><dt >装修：</dt> <dd >精装修</dd></dl> 
-         <dl ><dt >朝向：</dt> <dd >朝东</dd></dl>
+         <dl ><dt >装修：</dt> <dd >{{roomData.decorationDegree}}</dd></dl> 
+         <dl ><dt >朝向：</dt> <dd >{{roomData.orientation}}</dd></dl>
        </div>
       </div>
       
@@ -69,54 +67,18 @@
       </div>
       <div  class="facilities__box">
         <ul class="df">
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
+          
+          <li  class="fbli" v-for="(item,index) of support" :key="index">
+            
+            <i class="ico" :style="'background-image: url(&quot;'+item.ico+'&quot;); background-size: cover; background-position: 50% center; background-repeat: no-repeat;'"></i>
+            <span >{{item.name}}</span>
+
           </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
-          <li  class="fbli">
-            <i  class="iconfont icon-shafa ico" ></i> 
-            <span >沙发</span>
-          </li>
+          
         </ul>
       </div>
       <div class="room-clean">
-        <p >1、一室一厅，随时看房，拎包入驻，24小时达人管理，南北通透，空气流通，阳光充足。<br>2、配有基础的家居、全新空调、全新热水器等等，简约舒适，扫描入住。<br>3、配有厨房，可以做饭！精致装修，温馨周到。<br>4、智能系统，二维码门锁一键缴费轻松便捷，每天有阿姨打扫公共区域卫生，让你无后顾之忧，给你一个五星级的家！<br>5、周边配套：地铁11号线松岗站D出口600米，松岗实验学校874米，海港城购物广场，华润万家，沃尔玛，花果山公园等。</p>
+        <p v-html="roomData.remark"></p>
       </div>
       
     
@@ -156,12 +118,10 @@ export default {
   },
   data(){
     return{
-      roomNum:'',
-      roomUrl:'https://api.yizhulife.com/room/singleHouseInfo/',
+      roomInfoStr:'',
+      roomUrl:'https://api.yizhulife.com/room/',
       roomData:{},
-      roomTypeInfoVos:[],
-      roomTypeInfoVosNum:0,
-      moreRoomNum:3
+      support:{}
     }
   },
   methods:{
@@ -175,9 +135,11 @@ export default {
   },
   created() {
     
-    this.roomNum=this.$route.params.roomNum;
-    this.roomUrl+=this.roomNum;
-    console.log(this.roomUrl);
+    this.roomInfoStr=this.$route.params.roomInfoStr;
+    // this.roomInfoStr=this.roomInfoStr.replace(/,/g,"/");
+    
+    this.roomUrl+=this.roomInfoStr+"/fast";
+    console.log(this.roomInfoStr);
      axios({
               method:'get',
               url:this.roomUrl,
@@ -186,25 +148,29 @@ export default {
                 'X-Host': 'mall.cfg.common-banner'
               }
             }).then((res)=>{
-              this.roomData=res.data.data;
-              this.roomTypeInfoVosNum=this.roomData.roomTypeInfoVos.length;
-              if(this.roomTypeInfoVosNum>3){
-                for(var i=0;i<this.moreRoomNum;i++){
-                  this.roomTypeInfoVos.push(this.roomData.roomTypeInfoVos[i]);
-                }
-              }else{
-                for(var i=0;i<this.roomTypeInfoVosNum;i++){
-                  this.roomTypeInfoVos.push(this.roomData.roomTypeInfoVos[i]);
-                }
-              }
-              this.room_date=this.roomData;
-              console.log(this.roomData);
-              console.log(this.room_date);
-              // this.swplist = res.data.data;
+              console.log(res);
+               this.roomData=res.data.data;
+               console.log(this.roomData.supports);
+              
             });
-            
-      
+     axios({
+              method:'get',
+              url:'https://api.yizhulife.com/data/SUPPORT',
+              headers:{
+                'X-Client-Info': '{"a":"3000","ch":"1002","v":"5.0.4","e":"156922426216419659972948"}',
+                'X-Host': 'mall.cfg.common-banner'
+              }
+            }).then((res)=>{
+              
+              console.log(res);
+               this.support=res.data;
+               console.log(123321);
+               console.log(this.support.length);
+               console.log(this.roomData);
+               
+            });
   },
+ 
 }
 
 </script>
