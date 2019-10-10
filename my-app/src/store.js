@@ -5,10 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    filterhouse: []
   },
   mutations: {
-
+    addHouse(state, a) {
+      state.filterhouse = a;
+    }
   },
   actions: {
 

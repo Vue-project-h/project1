@@ -21,6 +21,16 @@
         </li>
       </ul>
     </div>
+    <div class="tit_moudule">
+      <div class="left-title">
+        <h2>热门房源</h2>
+        <span>Popular listings</span>
+      </div>
+      <div class="right-title">
+        <i class="iconfont icon-shaixuan"></i>
+        <router-link to="/chooseroom">房源筛选</router-link>
+      </div>
+    </div>
     <div class="houselist">
       <my-houselist v-for="(item,index) in housedata" :key="index" :itemlist="item"></my-houselist>
     </div>
@@ -91,7 +101,7 @@
         } else if (a == 2) {
           axios({
             method: "get",
-            url: "https://api.yizhulife.com/room/indexRoomHouseInfo/whole"
+            url: "https://api.yizhulife.com/room/indexRoomHouseInfo/economics"
           }).then(res => {
             let arrs = [];
             res.data.data.forEach((val, i, arr) => {
@@ -107,7 +117,7 @@
     created() {
       axios({
         method: "get",
-        url: "https://api.yizhulife.com/room/indexRoomHouseInfo/economics"
+        url: "https://api.yizhulife.com/room/indexRoomHouseInfo/whole"
       }).then(res => {
         let arrs = [];
         res.data.data.forEach((val, i, arr) => {
@@ -177,5 +187,32 @@
 
   .screen_content ul .screen_content-active i {
     color: #ff8001;
+  }
+  .tit_moudule {
+    padding: 0 9px;
+    font-size: 12px;
+    color: #999999;
+    overflow: hidden;
+    line-height: 35px;
+  }
+
+  .tit_moudule .left-title {
+    float: left;
+  }
+
+  .tit_moudule .left-title h2 {
+    font-size: 16px;
+    color: #444444;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+
+  .tit_moudule .left-title small {
+    vertical-align: baseline;
+  }
+
+  .tit_moudule .right-title {
+    float: right;
   }
 </style>

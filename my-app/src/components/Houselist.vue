@@ -8,7 +8,7 @@
         <p class="details-titles">{{itemlist.name}}</p>
         <div class="list-items-adress">
           <h3>{{itemlist.address}}</h3>
-          <div class="list-items-choose">
+          <div class="list-items-choose" v-if="itemlist.roomTypeParams">
             <span class="highlight-color">{{itemlist.roomTypeParams.length}}</span>
             <span>种可选户型</span>
           </div>
@@ -30,16 +30,19 @@
 
 <script>
   export default {
-    props:{
-      itemlist:Object,
+    props: {
+      itemlist: Object
     },
+    created() {
+      // console.log(itemlist);
+    }
   };
 </script>
 
 <style>
   .main-list {
     padding: 0 10px;
-    margin: 13px 0 0;
+    margin: 10px 0 0;
     border-bottom: 10px solid #f5f5f7;
   }
 
