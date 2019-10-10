@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-
+import RoomDetail from '@/views/roomDetial.vue'
+import RoomDetailInfo from '@/views/roomDetialInfo.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -12,6 +13,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/roomdetail/:roomNum',
+      
+      component: RoomDetail
+    },
+    {
+      path: '/roomdetailinfo',
+      
+      component: RoomDetailInfo
     },
     {
       path: '/about',
