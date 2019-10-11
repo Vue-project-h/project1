@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    filterhouse: []
+    filterhouse: [],
+    gongyuxiangqing: null,
   },
   mutations: {
     addHouse(state, a) {

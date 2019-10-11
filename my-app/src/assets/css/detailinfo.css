@@ -232,13 +232,14 @@
   width: 50%;
   display: inline-block;
   font-size: 12px;
-  padding-bottom: .1rem;
+  padding-bottom: 10px;
 }
 .situation_info dt {
   color: #999;
   display: inline-block;
 }
 .situation_info dd {
+  letter-spacing: 1px;
   color: #444;
   display: inline-block;
 }

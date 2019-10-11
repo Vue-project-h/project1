@@ -9,8 +9,6 @@ import { Tabbar, TabbarItem } from "vant";
 import axios from 'axios';
 Vue.prototype.$axios = axios;
 Vue.use(Tabbar).use(TabbarItem);
-import { Popup } from "vant";
-Vue.use(Popup);
 Vue.config.productionTip = false
 
 new Vue({

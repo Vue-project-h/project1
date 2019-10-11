@@ -13,6 +13,13 @@
       "unicode_decimal": 58923
     },
     {
+      "icon_id": "386440",
+      "name": "查找房源",
+      "font_class": "chazhaofangyuan",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
       "icon_id": "386471",
       "name": "大厦",
       "font_class": "dasha",
@@ -20,18 +27,18 @@
       "unicode_decimal": 58926
     },
     {
-      "icon_id": "588767",
-      "name": "大厦小区地址",
-      "font_class": "dashaxiaoqudizhi01",
-      "unicode": "e624",
-      "unicode_decimal": 58916
-    },
-    {
       "icon_id": "737441",
       "name": "点",
       "font_class": "dian",
       "unicode": "e621",
       "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "1518190",
+      "name": "下",
+      "font_class": "xia1",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
     },
     {
       "icon_id": "1801210",
@@ -46,6 +53,13 @@
       "font_class": "jingji",
       "unicode": "e601",
       "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "5327489",
+      "name": "方形",
+      "font_class": "fangxing",
+      "unicode": "e702",
+      "unicode_decimal": 59138
     },
     {
       "icon_id": "6629814",

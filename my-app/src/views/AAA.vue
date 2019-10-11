@@ -1,9 +1,10 @@
 <template>
-  <div>
-    <van-cell is-link @click="showPopup" position="bottom">展示弹出层</van-cell>
+<div>
+ <van-cell is-link @click="showPopup">展示弹出层</van-cell>
 
-    <van-popup v-model="show" position="bottom" :style="{ height: '75%' }" closeable round>123456789</van-popup>
-  </div>
+<van-popup v-model="show">内容</van-popup>
+
+</div>
 </template>
 
 <script>
