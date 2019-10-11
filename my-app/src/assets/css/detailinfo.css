@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 0.1rem;
+  z-index: 2;
 }
 
 .yjt1 {
@@ -41,11 +42,15 @@
   margin-top: 0;
 }
 
+/* 轮播 */
+.swip {
+  width: 100%;
+  overflow: hidden;
+  height: 2.44rem;
+}
 
 
-
-
-.roominfo img{
+.swip img{
   width: 100%;
   height: 2.44rem;
 }

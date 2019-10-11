@@ -11,6 +11,30 @@
   <div class="detail">
     <div class="roominfo">
       <img src="@/assets/img/20190819111352863_40.jpg" alt="">
+
+    <!-- <div class="swip">
+      <van-swipe :autoplay="1000" indicator-color="white" >
+        <van-swipe-item>
+          <img src="@/assets/img/20190819111352863_40.jpg" alt="">
+        </van-swipe-item>
+        <van-swipe-item>
+          <img src="@/assets/img/20190819111352863_40.jpg" alt="">
+        </van-swipe-item>
+        <van-swipe-item>
+          <img src="@/assets/img/20190819111352863_40.jpg" alt="">
+        </van-swipe-item>
+        <van-swipe-item>
+          <img src="@/assets/img/20190819111352863_40.jpg" alt="">
+        </van-swipe-item>
+      </van-swipe> -->
+      <!-- <van-swipe :autoplay="3000">
+        <van-swipe-item v-for="(image, index) in images" :key="index">
+          <img v-lazy="image" />
+        </van-swipe-item>
+      </van-swipe> -->
+      
+    </div>
+       
       <div class="roominfotext df">
         <h2>{{roomData.title}}</h2>
         <div class="aboutroom df">
@@ -105,7 +129,10 @@ import axios from 'axios'
 import HeaderNav from '@/components/HeaderNav.vue'
 import DetailInfo from '@/components/detailInfo.vue'
 import Map from '@/components/map.vue'
+import Vue from 'vue';
+import { Swipe, SwipeItem } from 'vant';
 
+Vue.use(Swipe).use(SwipeItem);
 export default {
   name: 'Roomdetail',
   props:{
@@ -121,7 +148,11 @@ export default {
       roomInfoStr:'',
       roomUrl:'https://api.yizhulife.com/room/',
       roomData:{},
-      support:{}
+      support:{},
+      images: [
+        '/img/20190819111352863_40.jpg',
+        '/img/20190819111352863_40.jpg'
+      ]
     }
   },
   methods:{
