@@ -1,6 +1,6 @@
 
 .roominfo .header {
-  height: 0.44rem;
+  height: 44px;
   background: transparent;
   position: absolute;
   top: 0;
@@ -8,7 +8,7 @@
   right: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.1rem;
+  padding: 0 10px;
   z-index: 2;
 }
 
@@ -21,14 +21,14 @@
 }
 .yjt4 {
   
-  padding: 0 0.1rem;
+  padding: 0 10px;
 }
 .yjt1 span:nth-of-type(2) {
-  font-size: 0.08rem;
+  font-size: 8px;
   margin-left: 0.02rem;
 }
 .yjt2{
-  font-size: 0.12rem;
+  font-size: 12px;
   width: 0.22rem;
   height: 0.22rem;
   border-radius: 50%;
@@ -58,29 +58,29 @@
 .roominfotext {
   background-color: #fff;
   /* height: 0.74rem; */
-  margin: 0 0 0.07rem 0;
+  margin: 0 0 7px 0;
  
   flex-direction: column;
   justify-content: center;
-  padding: 0.15rem 0.1rem 0.15rem 0.16rem;
+  padding: 15px 10px 15px 16px;
 }
 .roominfotext h2{
-  font-size: 0.13rem;
+  font-size: 13px;
   color: #333;
   font-weight: 700;
-  margin-bottom: 0.1rem;
+  margin-bottom: 10px;
 }
 .aboutroom span{
   background-color: #ededed;
   color: #999;
-  font-size: 0.12rem;
-  margin-right: 0.04rem;
-  padding: 0.04rem;
-  margin-bottom: 0.1rem;
+  font-size: 12px;
+  margin-right: 4px;
+  padding: 4px;
+  margin-bottom: 10px;
   border-radius: 3px;
 }
 .rf-left {
-  font-size: 0.13rem;
+  font-size: 13px;
   color: #f54300;
   justify-content: space-between;
 }
@@ -89,7 +89,7 @@
     color: #999;
 }
 .price {
-  margin: 0 0.04rem;
+  margin: 0 4px;
 }
 
 /* 本栋全部房型 */
@@ -99,12 +99,12 @@
 /* 本栋房型标题 */
 .roomtype-title1 {
   justify-content: space-between;
-  line-height: 0.34rem;
+  line-height: 34px;
   border-bottom: 1px solid #f1f1f1;
 }
  .roomtype-title1 h2{
   /* width: 1.3rem; */
-  font-size: 0.16rem;
+  font-size: 16px;
   color: #444;
   text-align: center;
   align-items: center;
@@ -112,24 +112,24 @@
 .roomtype-title1 h2 span {
   display: inline-block;
     background: #ff8300;
-    width: .04rem;
-    height: .16rem;
+    width: 4px;
+    height: 16px;
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
-    margin-right:  0.05rem;
+    margin-right:  5px;
 }
 .roomtype-title1 h2 p {
   color: #999;
-  font-size: 0.12rem;
-  margin-left:  0.05rem;
+  font-size: 12px;
+  margin-left:  5px;
 }
 .rt-num {
   color: #666;
-  font-size: 0.12rem;
-  padding-right: 0.1rem;
-  margin-top: 0.1rem;
-  width:1.1rem;
-  line-height:0.18rem;
+  font-size: 12px;
+  padding-right: 10px;
+  margin-top: 10px;
+  /* width:110px; */
+  line-height:18px;
   overflow:hidden;
 }
 
@@ -137,12 +137,12 @@
 
 /* 团队优惠 */
 .team {
-  height: 0.83rem;
+  height: 83px;
   background-color: #fff;
-  margin: 0.1rem 0;
+  margin: 10px 0;
   justify-content: center;
   align-items: center;
-  padding: 0 0.1rem;
+  padding: 0 10px;
 }
 .team img {
   width: 100%;
@@ -159,22 +159,22 @@
 }
 .roomftitle {
   border-bottom: 1px solid #f1f1f1;
-  padding: 0.12rem 0.15rem;
+  padding: 12px 15px;
 }
 .left_moudule {
-  font-size: 0.13rem;
+  font-size: 13px;
  
 }
 .left_moudule span {
-  width: 0.16rem;
-  height: 0.15rem;
+  width: 16px;
+  height: 15px;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .left_moudule h2 {
   color: #444;
-  margin-left: 0.05rem;
-  margin-right: 0.05rem;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .l_tit {
   background-image: url(../img/de-bg1.png);
@@ -183,14 +183,14 @@
   background-image: url(../img/de-bg2.png);
 }
 .fygk p{
-  font-size: .12rem;
+  font-size: 12px;
   color: #666;
-  padding: .23rem .14rem;
+  padding: 23px 14px;
 }
 
 .room-local {
   background-color: #fff;
-  margin: 0.1rem 0;
+  margin: 10px 0;
 }
 
 
@@ -199,39 +199,39 @@
   background-color: #fff;
 }
 .service_item {
-  height: 0.7rem;
+  height: 70px;
   align-items: center;
-  padding: 0 0.1rem;
+  padding: 0 10px;
   justify-content: space-between;
 }
 .service_item img{
-  width: 0.38rem;
-  height: 0.4rem;
+  width: 38px;
+  height: 40px;
 }
 .service_right_box {
-  width: 2.48rem;
+  width: 248px;
   border-bottom: 1px solid #f1f1f1;
-  padding-bottom: 0.1rem;
+  padding-bottom: 10px;
 }
 .service_right_box h2{
-  font-size: 0.13rem;
+  font-size: 13px;
   color: #444;
-  margin-bottom: 0.05rem;
+  margin-bottom: 5px;
 }
 .service_right_box span{
-  font-size: 0.1rem;
+  font-size: 10px;
   color: #666;
 }
 .housing-text {
-  padding: 0 0.1rem;
+  padding: 0 10px;
 }
 .situation_info {
-  padding:  0.15rem 0 0.1rem 0;
+  padding:  15px 0 10px 0;
 }
 .situation_info dl {
   width: 50%;
   display: inline-block;
-  font-size: .12rem;
+  font-size: 12px;
   padding-bottom: .1rem;
 }
 .situation_info dt {
@@ -244,35 +244,35 @@
 }
 
 .facilities__box {
-  padding: 0 0.1rem;
+  padding: 0 10px;
 }
 .facilities__box ul {
   flex-wrap: wrap;
 }
 .fbli {
   width: 25%;
-  line-height: .26rem;
+  line-height: 26px;
   display: flex;
   align-items: center;
 }
 .ico {
   display: block;
-  margin-right: 0.05rem;
-  width: 0.18rem;
-  height: 0.18rem;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
 }
 .fbli span {
-  font-size: 0.08rem;
+  font-size: 10px;
 }
 .room-clean {
   
-  padding: .2rem 0.1rem;
+  padding: 20px 10px;
 }
 .room-clean p {
   color: #666;
-  font-size: .12rem;
-  line-height: .18rem;
-  padding-bottom: 0.3rem;
+  font-size: 12px;
+  line-height: 18px;
+  padding-bottom: 30px;
 }
 
 
@@ -290,21 +290,21 @@
   color: #999;
   text-align: center;
   align-self: center;
-  font-size: .14rem;
+  font-size: 14px;
   border-top: 1px solid #e1e3e3;
-  height: 0.48rem;
+  height: 48px;
 }
 .detail_footer .a1{
   width: 20%;
-  font-size: 0.12rem;
+  font-size: 12px;
   background-color: #fff;
 }
 .a1 i {
-  font-size: 0.24rem;
+  font-size: 24px;
 }
 .detail_footer .btn{
   width: 30%;
-  line-height: 0.48rem;
+  line-height: 48px;
   color: #fff;
   background-color: #fab13f;
 }

@@ -3,6 +3,13 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import RoomDetail from '@/views/roomDetial.vue'
 import RoomDetailInfo from '@/views/roomDetialInfo.vue'
+import Tapbar from './components/Tapbar.vue'
+import Logo from './views/Logo.vue'
+import Main from './views/Main.vue'
+import Chooseroom from './views/Chooseroom.vue'
+import Filterhouse from './views/Filterhouse.vue'
+import AAA from './views/AAA.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -11,26 +18,46 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      components: {
+        'head': Logo,
+        'main': Main,
+        'footer': Tapbar
+      },
     },
     {
       path: '/roomdetail/:roomNum',
-      
-      component: RoomDetail
+
+      components: {
+        'main': RoomDetail
+      }
     },
     {
       path: '/roomdetailinfo/:roomInfoStr',
-      
-      component: RoomDetailInfo
+
+      components: {
+        'main': RoomDetailInfo
+      }
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/filtehouse',
+      components: {
+        'head': Logo,
+        'main': Filterhouse,
+      }
+    },
+    {
+      path: '/chooseroom',
+      components: {
+        'head': Logo,
+        'main': Chooseroom,
+      }
+    },
+    {
+      path: '/house-detail',
+      components: {
+        // 'head': Logo,
+        'main': AAA,
+      }
     }
   ]
 })

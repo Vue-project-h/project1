@@ -26,34 +26,34 @@ export default {
 
 .roominfo img{
   width: 100%;
-  height: 1.6rem;
+  height: 160px;
 }
 
 .roominfotext {
   background-color: #fff;
-  height: 0.74rem;
-  margin: 0.05rem 0 0.07rem 0;
-  padding-left:0.16rem;
+  height: 74px;
+  margin: 5px 0 7px 0;
+  padding-left:16px;
   flex-direction: column;
   justify-content: center;
 
 }
 .roominfotext h2{
-  font-size: 0.13rem;
+  font-size: 13px;
   color: #333;
   font-weight: 700;
-  margin-bottom: 0.1rem;
+  margin-bottom: 10px;
 }
 
 .rf-left {
-  font-size: 0.13rem;
+  font-size: 13px;
   color: #f54300;
   
 }
 .house_type {
   border: 1px solid #f54300;
   padding: 2px;
-  font-size: 0.12rem;
-  margin-left: 0.05rem;
+  font-size: 12px;
+  margin-left: 5px;
 }
 </style>

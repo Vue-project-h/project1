@@ -17,7 +17,7 @@ export default {
  @import 'http://at.alicdn.com/t/font_1448953_s0g9k5u5t0e.css';
 
 .header {
-  line-height: 0.44rem;
+  line-height: 44px;
   background: #ff8001;
   position: fixed;
   top: 0;
@@ -25,13 +25,13 @@ export default {
   right: 0;
 }
 .header span {
-  font-size: 0.16rem;
+  font-size: 16px;
   color: #fff;
 }
 .yjt {
-  font-size: 0.18rem;
-  padding-left: 0.1rem;
-  padding-right: 0.02rem;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 2px;
   color: #fff;
 }
 
