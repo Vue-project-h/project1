@@ -1,0 +1,25 @@
+
+    
+    
+    
+    .map {
+      padding: 0 0.1rem;
+      padding-bottom: 0.15rem;
+    }
+    .map-info {
+      display: flex;
+      color: #999999;
+      font-size: 0.12rem;
+      margin: 0.1rem 0;
+    }
+    .map-info em {
+      color: #444444;
+    }
+    #map1 {
+      height: 1.16rem;
+      width:100%;
+      overflow: hidden;
+      margin: 0 auto;
+     
+    }
+    
