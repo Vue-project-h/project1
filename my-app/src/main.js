@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './assets/css/reset.css'
 import './assets//iconfont/iconfont.css'
+import '../node_modules/animate.css/animate.css'
 import 'lib-flexible'
 import { Tabbar, TabbarItem } from "vant";
 import axios from 'axios';

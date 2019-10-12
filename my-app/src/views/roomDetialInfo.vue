@@ -192,7 +192,8 @@
             </ul>
           </div>
           <div class="conf">
-            <div class="qd">确定</div>
+            <!-- <router-link to="/roomdetailinfo"+></router-link> -->
+            <div class="qd" @click="f4">确定</div>
           </div>
         </div>
       </van-popup>
@@ -270,6 +271,12 @@
           // console.log(this.housetype);
           // console.log(res)
         });
+      },
+      f4(){
+        this.$router.push({
+          path: '/roomdetailinfo/'+this.whathouse.roomId
+        });
+        location.reload();
       },
       lookmore() {
         this.moreRoomNum = this.moreRoomNum > 3 ? 3 : this.roomTypeInfoVosNum;

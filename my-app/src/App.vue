@@ -1,7 +1,14 @@
 <template>
   <div id="app">
     <router-view name='head'/>
-    <router-view name='main'/>
+    <transition
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated fadeOut"
+      mode="out-in"
+      appear
+    >
+      <router-view name="main" />
+    </transition>
     <router-view name='footer'/>
   </div>
 </template>
