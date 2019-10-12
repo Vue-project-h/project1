@@ -1,14 +1,31 @@
 <template>
   <div class="header">
+      <router-link :to="linkto">
       <a  class="iconfont icon-youjiantou yjt"></a>
-      <span>独栋房源</span>
+      <span>{{routername}}</span>
+      </router-link>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HeaderNav',
-  
+   props:{
+    routername:String,
+    
+  },
+  computed: {
+    linkto(){
+      if(this.routername=="独栋房源"){
+        return "/";
+      }else if(this.routername=="登录"){
+        return "/";
+      }
+      else if(this.routername=="用户"){
+        return "/";
+      }
+    }
+  },
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="dd">
-    <HeaderNav></HeaderNav>
+    <HeaderNav :routername="routername"></HeaderNav>
     <div class="detail">
       <DetailInfo :roomdata="roomData"></DetailInfo>
       <div class="roomtype">
@@ -121,7 +121,8 @@
         roomData: {},
         roomTypeInfoVos: [],
         roomTypeInfoVosNum: 0,
-        moreRoomNum: 3
+        moreRoomNum: 3,
+        routername:'独栋房源'
       };
     },
     methods: {
