@@ -2,7 +2,8 @@
   <div>
     <div class="roominfo">
       <div class="header df">
-        <a class="iconfont icon-right1 yjt1 yjt2"></a>
+        <router-link class="iconfont icon-right1 yjt1 yjt2" :to="'/roomdetail/'+houseid"></router-link>
+        <!-- <a  ></a> -->
         <a href class="yjt1 df yjt4">
           <span class="iconfont icon-fenxiang yjt3"></span>
           <span>分享</span>
@@ -318,7 +319,7 @@
         // console.log(res);
         this.roomData = res.data.data;
         this.houseid = res.data.data.houseId;
-        this.roomData.remake = this.roomData.remark.replace(/。/g, "。<br>");
+        this.roomData.remake = this.roomData.remark.replace(/。/g, "。<br/>");
         this.roomData.releaseTime = this.roomData.releaseTime.split(" ")[0];
         // console.log(this.roomData.supports);
         let arr = [this.roomData.typeBed, this.roomData.typeRoom];
@@ -354,11 +355,7 @@
           "X-Host": "mall.cfg.common-banner"
         }
       }).then(res => {
-        // console.log(res);
         this.support = res.data;
-        // console.log(123321);
-        // console.log(this.support.length);
-        // console.log(this.roomData);
       });
     }
   };
