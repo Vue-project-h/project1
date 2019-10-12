@@ -125,7 +125,7 @@
         <span>找同户型</span>
       </div>
       <!-- </div> -->
-      <van-popup v-model="show" position="bottom" :style="{ height: '500px' }" closeable round>
+      <van-popup v-model="show" position="bottom" :style="{ height: '500px' }" closeable round  >
         <div class="house-list-detail">
           <div class="house_all_header">
             <div class="header-cont">
@@ -234,6 +234,7 @@
         whathouse: {},
         whatting: {},
         support: {},
+        isShouma:false,
         houseid: 0,
         images: ["/img/20190819111352863_40.jpg", "/img/20190819111352863_40.jpg"]
       };
