@@ -1,6 +1,6 @@
 <template>
  <van-tabbar v-model="active">
-  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="home-o" @click="jump">首页</van-tabbar-item>
   <van-tabbar-item icon="search">附近</van-tabbar-item>
   <van-tabbar-item icon="friends-o">
     <router-link to="/login">我的</router-link>
@@ -14,7 +14,14 @@
     return {
       active: 0
     }
-  }
+  },
+  methods: {
+    jump(){
+      this.$router.push({
+        path:'/'
+      })
+    }
+  },
   };
 </script>
 

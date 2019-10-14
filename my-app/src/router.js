@@ -10,6 +10,7 @@ import Chooseroom from './views/Chooseroom.vue'
 import Filterhouse from './views/Filterhouse.vue'
 import AAA from './views/AAA.vue'
 import Login from './views/Login.vue'
+import test from './views/test.vue'
 import UserCenter from './views/userCenter.vue'
 Vue.use(Router)
 
@@ -65,14 +66,40 @@ export default new Router({
       components: {
         // 'head': Logo,
         'main': Login,
+      },
+      beforeEnter: (to, from, next) => {
+        if (localStorage.getItem('tok')!=null) {
+          next({
+            path: '/usercenter'
+          })
+        } else {
+          next()
+        }
       }
     },
     {
-      path: '/usercenter/:user',
+      path: '/usercenter',
       components: {
         // 'head': Logo,
         'main': UserCenter,
         'footer': Tapbar
+      }
+    },
+    {
+      path: '/test',
+      components: {
+        // 'head': Logo,
+        'main': test,
+        'footer': Tapbar
+      },
+      beforeEnter: (to, from, next) => {
+        if (!localStorage.getItem('set')) {
+          next({
+            path: '/login'
+          })
+        } else {
+          next()
+        }
       }
     }
   ]

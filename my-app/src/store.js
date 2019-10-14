@@ -7,14 +7,18 @@ export default new Vuex.Store({
   state: {
     filterhouse: [],
     gongyuxiangqing: null,
-    userinfo: {}
+    userinfo: {},
+    tokens: null,
   },
   mutations: {
     addHouse(state, a) {
       state.filterhouse = a;
     },
-    ininfo(state,info) { 
+    ininfo(state, info) {
       state.userinfo = info;
+    },
+    layin(state, info) {
+      state.tokens = info;
     }
   },
   actions: {

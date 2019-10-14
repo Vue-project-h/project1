@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div class="banner">
-      <div class="banner-box">
-        <a href>
-          <img src="../assets/img/banner.jpg" alt />
-        </a>
+    <router-link to="/test">
+      <div class="banner">
+        <div class="banner-box">
+          <a href>
+            <img src="../assets/img/banner.jpg" alt />
+          </a>
+        </div>
       </div>
-    </div>
+    </router-link>
     <div class="screen_content">
       <ul>
         <li
